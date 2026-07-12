@@ -2,7 +2,7 @@ MAIN=main
 
 SRCABC=$(wildcard tunes/*.abc)
 
-all: twice
+all: once
 
 twice: once
 	$(MAKE) -B $^

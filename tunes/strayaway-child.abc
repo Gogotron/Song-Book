@@ -4,6 +4,8 @@ R: jig
 M: 6/8
 L: 1/8
 K: Emin
+%%topmargin 0
+%%bottommargin 0
 A|:BEE GEE|B,EE G2 A|BEE A2 G|FDF Adc|!
 BEE GEE B,EE G2 A|BcB B2 A|GEE E2 A:|!
 |:Bee BdB|dBG AGA|Bee BdB|!
