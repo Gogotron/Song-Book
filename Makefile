@@ -1,4 +1,4 @@
-MAIN=main
+MAIN=song-book
 
 SRCABC=$(wildcard tunes/*.abc)
 
