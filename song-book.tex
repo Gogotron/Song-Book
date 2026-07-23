@@ -8,6 +8,8 @@
 
 \usepackage{tocloft}
 
+\usepackage{multicol}
+
 \newcommand{\tocextension}{toc}
 \newcommand{\tune}[3]{
   \abcinput[options=+c -O tunes/#1.ps]{tunes/#1}
@@ -34,15 +36,21 @@
 
 \begin{document}
 \maketitle
+
 \listoftunes
+\vspace{2em}
+\begin{multicols}{2}
 \listofreels
-\listofjigs
-\listofpolkas
 \listofhornpipes
-\listofslides
-\listofslipjigs
-\listofwaltzes
+\listofpolkas
 \listofstrathspeys
+\columnbreak
+\listofjigs
+\listofslipjigs
+\listofslides
+\listofwaltzes
+\end{multicols}
+
 \pagebreak
 
 \tune{battering-ram}{Battering Ram, The}{jig}
