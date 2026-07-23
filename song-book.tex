@@ -1,51 +1,79 @@
 \documentclass[a4paper]{article}
 
+% Narrower margins
 \usepackage[top=1in,bottom=1in]{geometry}
 
+% ABC notation
 \usepackage{abc}
 
-\newcommand{\tune}[2]{
-  \addcontentsline{toc}{section}{#2}
+\usepackage{tocloft}
+
+\newcommand{\tocextension}{toc}
+\newcommand{\tune}[3]{
+  \addcontentsline{toc-tunes}{section}{#2}
+  \renewcommand{\tocextension}{toc-#3}
+  \addcontentsline{\tocextension}{section}{#2}
   \abcinput[options=+c -O tunes/#1.ps]{tunes/#1}
   \vfill
 }
+
+\renewcommand*\contentsname{Tunes}
+
+\newlistof{tunes}{toc-tunes}{Tunes}
+\newlistof{reels}{toc-reel}{Reels}
+\newlistof{jigs}{toc-jig}{Jigs}
+\newlistof{polkas}{toc-polka}{Polkas}
+\newlistof{hornpipes}{toc-hornpipe}{Hornpipes}
+\newlistof{slides}{toc-slide}{Slides}
+\newlistof{slipjigs}{toc-slipjig}{Slip Jigs}
+\newlistof{waltzes}{toc-waltz}{Waltzes}
+\newlistof{strathspeys}{toc-strathspey}{Strathspeys}
+
 
 \title{Song Book}
 
 \begin{document}
 \maketitle
-\tableofcontents
+\listoftunes
+\listofreels
+\listofjigs
+\listofpolkas
+\listofhornpipes
+\listofslides
+\listofslipjigs
+\listofwaltzes
+\listofstrathspeys
 \pagebreak
 
-\tune{battering-ram}{Battering Ram, The}
-\tune{lake-shore}{Lake Shore, The}
-\tune{ah-surely}{Ah, Surely!}
-\tune{stone-of-destiny}{Stone of Destiny, The}
-\tune{humours-of-derrycrossane}{Humours of Derrycrossane, The}
-\tune{exiles-jig}{Exile's Jig, The}
-\tune{ivy-leaf}{Ivy Leaf, The}
-\tune{strayaway-child}{Strayaway Child, The}
-\tune{jerry-beavers-hat}{Jerry Beaver's Hat}
-\tune{trip-to-birmingham}{Trip to Birmingham, The}
-\tune{green-fields-of-rossbeigh}{Green Fields of Rossbeigh, The}
-\tune{foxhunter}{Foxhunter, The}
-\tune{corsair}{Corsair, The}
-\tune{castle-kelly}{Castle Kelly}
-\tune{dregs-of-birch}{Dregs of Birch, The}
-\tune{enchanted-lady}{Enchanted Lady, The}
-\tune{tuttles}{Tuttle's}
-\tune{sailors-bonnet}{Sailor's Bonnet, The}
-\tune{bank-of-ireland}{Bank of Ireland, The}
-\tune{monaghan}{Monaghan, The}
-\tune{corner-house}{Corner House, The}
-\tune{across-the-black-river}{Across the Black River}
-\tune{si-bheag-si-mhor}{Sí Bheag Sí Mhór}
-\tune{banish-misfortune}{Banish Misfortune}
-\tune{stack-of-wheat}{Stack of Wheat, The}
-\tune{okeefes}{O'Keefe's}
-\tune{ashokan-farewell}{Ashokan Farewell}
-\tune{bog-an-lochan}{Bog An Lochan}
-\tune{maid-behind-the-bar}{Maid Behind the Bar, The}
-\tune{anthony-frawleys}{Anthony Frawley's}
+\tune{battering-ram}{Battering Ram, The}{jig}
+\tune{lake-shore}{Lake Shore, The}{jig}
+\tune{ah-surely}{Ah, Surely!}{reel}
+\tune{stone-of-destiny}{Stone of Destiny, The}{reel}
+\tune{humours-of-derrycrossane}{Humours of Derrycrossane, The}{slipjig}
+\tune{exiles-jig}{Exile's Jig, The}{slipjig}
+\tune{ivy-leaf}{Ivy Leaf, The}{reel}
+\tune{strayaway-child}{Strayaway Child, The}{jig}
+\tune{jerry-beavers-hat}{Jerry Beaver's Hat}{jig}
+\tune{trip-to-birmingham}{Trip to Birmingham, The}{reel}
+\tune{green-fields-of-rossbeigh}{Green Fields of Rossbeigh, The}{reel}
+\tune{foxhunter}{Foxhunter, The}{slipjig}
+\tune{corsair}{Corsair, The}{reel}
+\tune{castle-kelly}{Castle Kelly}{reel}
+\tune{dregs-of-birch}{Dregs of Birch, The}{reel}
+\tune{enchanted-lady}{Enchanted Lady, The}{reel}
+\tune{tuttles}{Tuttle's}{reel}
+\tune{sailors-bonnet}{Sailor's Bonnet, The}{reel}
+\tune{bank-of-ireland}{Bank of Ireland, The}{reel}
+\tune{monaghan}{Monaghan, The}{jig}
+\tune{corner-house}{Corner House, The}{reel}
+\tune{across-the-black-river}{Across the Black River}{jig}
+\tune{si-bheag-si-mhor}{Sí Bheag Sí Mhór}{waltz}
+\tune{banish-misfortune}{Banish Misfortune}{jig}
+\tune{stack-of-wheat}{Stack of Wheat, The}{hornpipe}
+\tune{okeefes}{O'Keefe's}{slide}
+\tune{ashokan-farewell}{Ashokan Farewell}{waltz}
+\tune{bog-an-lochan}{Bog An Lochan}{strathspey}
+\tune{maid-behind-the-bar}{Maid Behind the Bar, The}{reel}
+\tune{anthony-frawleys}{Anthony Frawley's}{jig}
 
 \end{document}

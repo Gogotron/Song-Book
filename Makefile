@@ -13,6 +13,6 @@ $(MAIN).pdf: $(MAIN).tex $(SRCABC)
 	pdflatex -interaction=batchmode --shell-escape $^
 
 clean:
-	rm -rf $(MAIN).pdf *.aux *.log tunes/*.ps tunes/*.eps tunes/*.pdf *.toc
+	rm -rf $(MAIN).pdf *.aux *.log tunes/*.ps tunes/*.eps tunes/*.pdf *.toc *.toc-*
 
 .PHONY: all clean
