@@ -10,10 +10,10 @@
 
 \newcommand{\tocextension}{toc}
 \newcommand{\tune}[3]{
+  \abcinput[options=+c -O tunes/#1.ps]{tunes/#1}
   \addcontentsline{toc-tunes}{section}{#2}
   \renewcommand{\tocextension}{toc-#3}
   \addcontentsline{\tocextension}{section}{#2}
-  \abcinput[options=+c -O tunes/#1.ps]{tunes/#1}
   \vfill
 }
 

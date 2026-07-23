@@ -4,7 +4,8 @@ SRCABC=$(wildcard tunes/*.abc)
 
 all: once
 
-twice: once
+thrice: once
+	$(MAKE) -B $^
 	$(MAKE) -B $^
 
 once: $(MAIN).pdf
@@ -15,4 +16,4 @@ $(MAIN).pdf: $(MAIN).tex $(SRCABC)
 clean:
 	rm -rf $(MAIN).pdf *.aux *.log tunes/*.ps tunes/*.eps tunes/*.pdf *.toc *.toc-*
 
-.PHONY: all clean
+.PHONY: all clean once thrice
