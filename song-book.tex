@@ -30,7 +30,7 @@
 \newlistof{slipjigs}{toc-slipjig}{Slip Jigs}
 \newlistof{waltzes}{toc-waltz}{Waltzes}
 \newlistof{strathspeys}{toc-strathspey}{Strathspeys}
-\newlistof{marches}{toc-marches}{Marches}
+\newlistof{marches}{toc-march}{Marches}
 
 
 \title{Song Book}
@@ -39,15 +39,23 @@
 \maketitle
 
 \listoftunes
-\vspace{2em}
+
+\vfill
+
 \begin{multicols}{2}
 \listofreels
+\columnbreak
+\listofjigs
+\end{multicols}
+
+\pagebreak
+
+\begin{multicols}{2}
 \listofhornpipes
 \listofpolkas
 \listofstrathspeys
 \listofmarches
 \columnbreak
-\listofjigs
 \listofslipjigs
 \listofslides
 \listofwaltzes
@@ -114,7 +122,7 @@
 \tune{john-brosnans}{John Brosnan's}{polka}
 \tune{saint-annes}{Saint Anne's}{reel}
 \tune{moll-roe}{Moll Roe}{slipjig}
-\tunes{an-paistin-fionn}{An Paistin Fionn}{hornpipe}
+\tune{an-paistin-fionn}{An Paistin Fionn}{hornpipe}
 
 
 \end{document}
